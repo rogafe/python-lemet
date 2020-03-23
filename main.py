@@ -11,7 +11,7 @@ def usage():
     print("use -f to force")
 
 def bus():
-    url = "https://lemet.fr/helpers/app_script/temps_reel.php?stop=GARE&line=3"
+    url = "https://lemet.fr/helpers/app_script/temps_reel.php?stop=EGLISE&line=3"
     r = requests.get(url)
     # Legacy
     #print(json.loads(r.content), "\n")
@@ -43,8 +43,8 @@ def home_to_saulcy():
 
     today = date.today()
     t = today + timedelta(days=1)
-    url_tomorow = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=GARE%20(arret)&arret_arrivee=SAULCY%20(arret)&jour={d}-{m}-{y}&heure=06:00&mode=1&typerecherche=1".format(d=t.day, m=t.month, y=t.year)
-    url_today = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=GARE%20(arret)&arret_arrivee=SAULCY%20(arret)&jour={d}-{m}-{y}&heure=06:00&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year)
+    url_tomorow = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=EGLISE%20(arret)&arret_arrivee=SAULCY%20(arret)&jour={d}-{m}-{y}&heure=06:00&mode=1&typerecherche=1".format(d=t.day, m=t.month, y=t.year)
+    url_today = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=EGLISE%20(arret)&arret_arrivee=SAULCY%20(arret)&jour={d}-{m}-{y}&heure=06:00&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year)
     now = datetime.now()
     now_time = now.time().strftime('%H:%M:%S')
     #print_home(url_tomorow)
@@ -59,7 +59,7 @@ def l3_rep():
     now = datetime.now()
     now_time = now.time().strftime('%H:%M:%S')
     today = date.today()
-    url_next = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=GARE%20(arret)&arret_arrivee=REPUBLIQUE%20(arret)&jour{d}-{m}-{y}&heure={H}:{M}&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year, H=now.hour, M=now.minute)
+    url_next = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=EGLISE%20(arret)&arret_arrivee=REPUBLIQUE%20(arret)&jour{d}-{m}-{y}&heure={H}:{M}&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year, H=now.hour, M=now.minute)
 print(url_next)
 
 
