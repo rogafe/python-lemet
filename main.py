@@ -5,7 +5,7 @@ import sys
 import argparse
 from datetime import datetime, date, time, timedelta
 #import time
-#print("Debug")
+print("Debug")
 
 def usage():
     print("use -f to force")
@@ -55,12 +55,12 @@ def home_to_saulcy():
 
 
 
-def l3_rep():
-    now = datetime.now()
-    now_time = now.time().strftime('%H:%M:%S')
-    today = date.today()
-    url_next = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=EGLISE%20(arret)&arret_arrivee=REPUBLIQUE%20(arret)&jour{d}-{m}-{y}&heure={H}:{M}&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year, H=now.hour, M=now.minute)
-print(url_next)
+#def l3_rep():
+#    now = datetime.now()
+#    now_time = now.time().strftime('%H:%M:%S')
+#    today = date.today()
+#    url_next = "https://lemet.fr/helpers/app_script/app_router.php?arret_depart=EGLISE%20(arret)&arret_arrivee=REPUBLIQUE%20(arret)&jour{d}-{m}-{y}&heure={H}:{M}&mode=1&typerecherche=1".format(d=today.day, m=today.month, y=today.year, H=now.hour, M=now.minute)
+#    print(url_next)
 
 
 def main():
@@ -81,8 +81,8 @@ def main():
         metis_mercy()
     elif args.saulcy:
         home_to_saulcy()
-    elif args.l3_rep:
-        l3_rep()
+#    elif args.l3_rep:
+#        l3_rep()
     else:
         now = datetime.now()
         now_time = now.time()
